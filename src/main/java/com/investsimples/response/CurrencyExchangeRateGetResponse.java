@@ -7,7 +7,7 @@ import lombok.Builder;
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy.class)
 @Builder
-public record CurrencyExchangeRateGetResponse (
+public record CurrencyExchangeRateGetResponse(
         @JsonProperty("Realtime Currency Exchange Rate")
         RealtimeCurrencyExchangeRate realtimeCurrencyExchangeRate
 ) {
@@ -38,5 +38,6 @@ public record CurrencyExchangeRateGetResponse (
 
             @JsonProperty("9. Ask Price")
             String askPrice
-    ) {}
+    ) {
+    }
 }

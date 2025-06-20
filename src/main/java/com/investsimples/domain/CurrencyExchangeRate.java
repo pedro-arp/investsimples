@@ -1,6 +1,7 @@
 package com.investsimples.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.investsimples.utils.Wallet;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import lombok.Setter;
 public class CurrencyExchangeRate {
     @JsonProperty("Realtime Currency Exchange Rate")
     private RealtimeCurrencyExchangeRate realtimeCurrencyExchangeRate;
+
     @Getter
     @Setter
     public static class RealtimeCurrencyExchangeRate {
@@ -38,6 +40,6 @@ public class CurrencyExchangeRate {
 
         @JsonProperty("9. Ask Price")
         private String askPrice;
-        private String test;
+        private Wallet wallet;
     }
 }
