@@ -1,0 +1,12 @@
+server:
+  port: 8050
+  error:
+    include-stacktrace: never
+
+alpha-vantage-api:
+  base-url: https://www.alphavantage.co/query?
+  function: function=CURRENCY_EXCHANGE_RATE&
+  symbol: from_currency=BTC&
+  interval: to_currency=EUR&
+  apikey: apikey=demo
+
