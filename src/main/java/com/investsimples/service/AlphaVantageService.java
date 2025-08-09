@@ -6,6 +6,7 @@ import com.investsimples.utils.Assets;
 import com.investsimples.utils.Wallet;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
@@ -16,7 +17,7 @@ import java.util.Objects;
 @Service
 @RequiredArgsConstructor
 public class AlphaVantageService {
-
+    @Qualifier("alphaVantageApiClient")
     private final RestClient restClient;
 
     private final AlphaVantageConfigurationProperties properties;

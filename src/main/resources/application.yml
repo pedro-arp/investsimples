@@ -9,4 +9,6 @@ alpha-vantage-api:
   symbol: from_currency=BTC&
   interval: to_currency=EUR&
   apikey: apikey=demo
+wallet-api:
+  base-url: http://localhost:8040
 
