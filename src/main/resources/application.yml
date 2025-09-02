@@ -2,13 +2,27 @@ server:
   port: 8050
   error:
     include-stacktrace: never
+spring:
+  application:
+    name: invest-simples
+  datasource:
+    url: jdbc:mysql://localhost:3306/invest-simples?useTimezone=true&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: ${ROOT_USER:root}
+    password: ${ROOT_PASSWORD:example}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 
-alpha-vantage-api:
-  base-url: https://www.alphavantage.co/query?
-  function: function=CURRENCY_EXCHANGE_RATE&
-  symbol: from_currency=BTC&
-  interval: to_currency=EUR&
-  apikey: apikey=demo
+logging:
+  level:
+    org.springframework.security: debug
+
+
+coin-gecko-api:
+  base-url: https://api.coingecko.com/api/v3/coins/
+  api-key: ${COINGECKO_API_KEY:CG-seEZXzsdxqxvwF1Z5cpB1Be1}
+
 wallet-api:
   base-url: http://localhost:8040
 

@@ -9,13 +9,13 @@ import org.springframework.web.client.RestClient;
 @Configuration
 @RequiredArgsConstructor
 public class RestClientConfiguration {
-    private final AlphaVantageConfigurationProperties alphaVantageConfigurationProperties;
+    private final CoinGeckoConfigurationProperties coinGeckoConfigurationProperties;
     private final WalletConfigurationProperties walletConfigurationProperties;
 
     @Bean
     @Primary
-    public RestClient alphaVantageApiClient(RestClient.Builder builder) {
-        return builder.baseUrl(alphaVantageConfigurationProperties.baseUrl()).build();
+    public RestClient coinGeckoApiClient(RestClient.Builder builder) {
+        return builder.baseUrl(coinGeckoConfigurationProperties.baseUrl()).build();
     }
 
     @Bean
