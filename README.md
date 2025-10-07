@@ -34,12 +34,7 @@ src/
 git clone https://github.com/seu-usuario/invest-simples.git
 ```
 
-2. Configure seu `application.yml` com sua chave AlphaVantage
-```yaml
-alpha:
-  base-url: https://www.alphavantage.co/query
-  apikey: SUA_CHAVE_API
-```
+2. Configure seu `application.yml` 
 
 3. Rode a aplicação
 ```bash
