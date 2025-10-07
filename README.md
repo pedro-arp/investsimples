@@ -5,7 +5,7 @@ Invest Simples é uma plataforma de **educação financeira** e **simulação de
 
 ## 🔧 Tecnologias
 
-- Java 17
+- Java 21
 - Spring Boot
 - HTML5, CSS3, JS (protótipos Figma)
 - REST APIs
